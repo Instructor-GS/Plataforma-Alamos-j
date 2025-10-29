@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma digital para contratar servicios generales, profesionales y ecoeficientes con seguimiento en tiempo real, checklist digital y compromiso ambiental.">
+    <title>Álamos J Clean - Plataforma de Servicios Generales Profesionales y Ecoeficientes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="Logo2.png" alt="Álamos J Clean" class="logo-img">
+                </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Inicio</a>
+                <a href="#services" class="nav-link">Servicios</a>
+                <a href="#about" class="nav-link">Nosotros</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+                <button class="btn-login" onclick="showLogin()">Iniciar Sesión</button>
+                <button class="btn-register" onclick="showRegister()">Registrarse</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Plataforma digital para contratar <span class="highlight">servicios generales, profesionales y ecoeficientes</span></h1>
+            <p>La solución digital completa para conectar clientes con servicios profesionales de calidad, con seguimiento en tiempo real y compromiso ambiental.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="showBooking()">
+                    <i class="fas fa-calendar-plus"></i>
+                    Agendar Servicio
+                </button>
+                <button class="btn-secondary" onclick="showClientPanel()">
+                    <i class="fas fa-user-circle"></i>
+                    Panel Cliente
+                </button>
+            </div>
+        </div>
+        <div class="hero-features">
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Seguimiento Digital</h3>
+                <p>Monitorea tu servicio en tiempo real</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-leaf"></i>
+                <h3>100% Eco</h3>
+                <p>Productos biodegradables certificados</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-camera"></i>
+                <h3>Evidencias Fotográficas</h3>
+                <p>Fotos antes y después del servicio</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Geolocalización</h3>
+                <p>Ubicación en tiempo real del equipo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Servicios Disponibles en la Plataforma</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Servicios Residenciales</h3>
+                    <p>Servicios generales para el hogar con cuadrilla especializada</p>
+                    <ul>
+                        <li>Limpieza general de espacios</li>
+                        <li>Mantenimiento doméstico</li>
+                        <li>Productos ecoeficientes</li>
+                    </ul>
+                    <button class="btn-service" onclick="selectService('residencial')">Solicitar</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Servicios Empresariales</h3>
+                    <p>Oficinas y locales comerciales</p>
+                    <ul>
+                        <li>Limpieza de oficinas</li>
+                        <li>Mantenimiento general</li>
+                        <li>Protocolos SST</li>
+                    </ul>
+                    <button class="btn-service" onclick="selectService('empresarial')">Solicitar</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-virus-slash"></i>
+                    <h3>Servicios Especializados</h3>
+                    <p>Desinfección y servicios de alto contacto</p>
+                    <ul>
+                        <li>Desinfección especializada</li>
+                        <li>Eliminación de virus y bacterias</li>
+                        <li>Certificación sanitaria</li>
+                    </ul>
+                    <button class="btn-service" onclick="selectService('profunda')">Solicitar</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Servicios Post-obra</h3>
+                    <p>Servicios especializados según cotización</p>
+                    <ul>
+                        <li>Limpieza post construcción</li>
+                        <li>Servicios post mudanza</li>
+                        <li>Cotización personalizada</li>
+                    </ul>
+                    <button class="btn-service" onclick="selectService('posobra')">Cotizar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Nuestra Historia</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>El Nacimiento de Álamos J Clean</h3>
+                    <p>Álamos J Clean nace de la necesidad de <strong>mejorar los ingresos familiares de las madres cabezas de familia</strong> que forman parte de los aprendices del SENA y que hacen parte de este proyecto transformador.</p>
+                    
+                    <div class="mission-values">
+                        <div class="value-item">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h4>Dignificar el Salario</h4>
+                            <p>Ofrecemos oportunidades laborales justas y bien remuneradas para madres trabajadoras.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Mejorar su Entorno Laboral</h4>
+                            <p>Creamos un ambiente de trabajo digno, seguro y profesional para nuestro equipo.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-star"></i>
+                            <h4>Prestar Servicio de Calidad</h4>
+                            <p>Nos comprometemos con la excelencia en cada servicio que brindamos.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-smile"></i>
+                            <h4>Satisfacción del Cliente</h4>
+                            <p>La felicidad de nuestros clientes es nuestra principal motivación.</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Aumentar la Confianza del Cliente</h4>
+                            <p>Construimos relaciones duraderas basadas en la transparencia y profesionalismo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-female"></i>
+                        <h3>50+</h3>
+                        <p>Madres Beneficiadas</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>SENA</h3>
+                        <p>Proyecto Formativo</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>100%</h3>
+                        <p>Productos Eco</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Social</h3>
+                        <p>Impacto Positivo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bookingModal')">&times;</span>
+            <h2>Agendar Servicio</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Tipo de Servicio</label>
+                    <select id="serviceType" required>
+                        <option value="">Seleccionar servicio</option>
+                        <option value="residencial">Limpieza Residencial</option>
+                        <option value="empresarial">Limpieza Empresarial</option>
+                        <option value="profunda">Limpieza Profunda</option>
+                        <option value="posobra">Pos-obra / Pos-mudanza</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Fecha</label>
+                        <input type="date" id="serviceDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Hora</label>
+                        <select id="serviceTime" required>
+                            <option value="">Seleccionar hora</option>
+                            <option value="08:00">08:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" id="serviceAddress" placeholder="Ingresa la dirección completa" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Área aproximada (m²)</label>
+                        <input type="number" id="serviceArea" placeholder="Ej: 100" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Número de habitaciones</label>
+                        <select id="serviceRooms">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5+">5+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Información adicional</label>
+                    <textarea id="serviceNotes" placeholder="Detalles especiales, acceso, etc."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Datos de contacto</label>
+                    <input type="text" id="clientName" placeholder="Nombre completo" required>
+                    <input type="tel" id="clientPhone" placeholder="Teléfono" required>
+                    <input type="email" id="clientEmail" placeholder="Email" required>
+                </div>
+                <button type="submit" class="btn-primary">Confirmar Agendamiento</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Client Panel Modal -->
+    <div id="clientModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeModal('clientModal')">&times;</span>
+            <div class="client-panel">
+                <div class="panel-header">
+                    <h2>Panel de Cliente</h2>
+                    <div class="client-info">
+                        <img id="clientPhoto" class="client-photo" src="" alt="Foto de perfil" style="display: none;">
+                        <i id="clientIcon" class="fas fa-user-circle"></i>
+                        <span id="clientName">Usuario</span>
+                    </div>
+                </div>
+                <div class="panel-tabs">
+                    <button class="tab-btn active" onclick="showTab('services')">Mis Servicios</button>
+                    <button class="tab-btn" onclick="showTab('history')">Historial</button>
+                    <button class="tab-btn" onclick="showTab('tracking')">Seguimiento</button>
+                    <button class="tab-btn" onclick="showTab('billing')">Facturación</button>
+                </div>
+                <div id="servicesTab" class="tab-content active">
+                    <div class="service-status">
+                        <div class="status-card current">
+                            <div class="status-header">
+                                <h3>Servicio en Progreso</h3>
+                                <span class="status-badge active">En Ejecución</span>
+                            </div>
+                            <div class="service-details">
+                                <p><i class="fas fa-calendar"></i> Hoy, 14:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Calle 15 #23-45, Riohacha</p>
+                                <p><i class="fas fa-users"></i> Cuadrilla: María y Carlos</p>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                            <p class="progress-text">65% Completado - Limpieza de cocina</p>
+                            <button class="btn-track" onclick="showTracking()">Ver Seguimiento</button>
+                        </div>
+                        <div class="status-card">
+                            <div class="status-header">
+                                <h3>Próximo Servicio</h3>
+                                <span class="status-badge scheduled">Programado</span>
+                            </div>
+                            <div class="service-details">
+                                <p><i class="fas fa-calendar"></i> Viernes, 15:00 PM</p>
+                                <p><i class="fas fa-home"></i> Limpieza Residencial</p>
+                                <p><i class="fas fa-clock"></i> Duración estimada: 3 horas</p>
+                            </div>
+                            <button class="btn-secondary" onclick="rescheduleService()">Reprogramar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="historyTab" class="tab-content">
+                    <div class="history-list">
+                        <div class="history-item">
+                            <div class="history-date">15 Dic 2024</div>
+                            <div class="history-details">
+                                <h4>Limpieza Residencial</h4>
+                                <p>Servicio completado - Calificación: ⭐⭐⭐⭐⭐</p>
+                                <span class="history-cost">$85.000</span>
+                            </div>
+                            <button class="btn-small" onclick="viewReport('service1')">Ver Reporte</button>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-date">08 Dic 2024</div>
+                            <div class="history-details">
+                                <h4>Limpieza Profunda</h4>
+                                <p>Servicio completado - Calificación: ⭐⭐⭐⭐⭐</p>
+                                <span class="history-cost">$120.000</span>
+                            </div>
+                            <button class="btn-small" onclick="viewReport('service2')">Ver Reporte</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="trackingTab" class="tab-content">
+                    <div class="tracking-container">
+                        <div class="tracking-map">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <p>Mapa de seguimiento en tiempo real</p>
+                                <div class="team-location">
+                                    <i class="fas fa-users"></i>
+                                    <span>Equipo en: Calle 15 #23-45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tracking-checklist">
+                            <h3>Checklist Digital</h3>
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Alistamiento y verificación EPP</span>
+                                <small>14:00 PM</small>
+                            </div>
+                            <div class="checklist-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Limpieza de sala</span>
+                                <small>14:30 PM</small>
+                            </div>
+                            <div class="checklist-item active">
+                                <i class="fas fa-clock"></i>
+                                <span>Limpieza de cocina</span>
+                                <small>En progreso</small>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-circle"></i>
+                                <span>Limpieza de baños</span>
+                                <small>Pendiente</small>
+                            </div>
+                            <div class="checklist-item">
+                                <i class="fas fa-circle"></i>
+                                <span>Control de calidad</span>
+                                <small>Pendiente</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="billingTab" class="tab-content">
+                    <div class="billing-summary">
+                        <div class="billing-card">
+                            <h3>Resumen de Facturación</h3>
+                            <div class="billing-item">
+                                <span>Servicios este mes:</span>
+                                <strong>3</strong>
+                            </div>
+                            <div class="billing-item">
+                                <span>Total facturado:</span>
+                                <strong>$290.000</strong>
+                            </div>
+                            <div class="billing-item">
+                                <span>Próximo pago:</span>
+                                <strong>$85.000 - 20 Dic</strong>
+                            </div>
+                        </div>
+                        <div class="invoices-list">
+                            <h4>Facturas Recientes</h4>
+                            <div class="invoice-item">
+                                <span>Factura #001</span>
+                                <span>15 Dic 2024</span>
+                                <span>$85.000</span>
+                                <button class="btn-small">Descargar</button>
+                            </div>
+                            <div class="invoice-item">
+                                <span>Factura #002</span>
+                                <span>08 Dic 2024</span>
+                                <span>$120.000</span>
+                                <button class="btn-small">Descargar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Ingresar</button>
+                <p class="form-footer">¿No tienes cuenta? <a href="#" onclick="showRegister()">Regístrate aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Crear Cuenta</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label>Apellido</label>
+                    <input type="text" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="tel" name="phone">
+                </div>
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" name="address">
+                </div>
+                <div class="form-group">
+                    <label>Foto de Perfil</label>
+                    <input type="file" name="profilePhoto" accept="image/*">
+                    <small>Formatos permitidos: JPG, PNG, GIF (máximo 5MB)</small>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Registrarse</button>
+                <p class="form-footer">¿Ya tienes cuenta? <a href="#" onclick="showLogin()">Inicia sesión aquí</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Álamos J Clean</h3>
+                    <p>Plataforma digital para contratar servicios generales, profesionales y ecoeficientes con seguimiento en tiempo real.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li>Servicios Residenciales</li>
+                        <li>Servicios Empresariales</li>
+                        <li>Servicios Especializados</li>
+                        <li>Servicios Post-obra</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@alamosjclean.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Riohacha, La Guajira</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Álamos J Clean. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
